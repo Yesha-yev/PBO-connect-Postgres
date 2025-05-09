@@ -1,6 +1,6 @@
 ﻿namespace PBO_connect_Postgres
 {
-    partial class Form1
+    partial class Dekstop
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,9 +36,11 @@
             // 
             // gridToDo
             // 
+            gridToDo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridToDo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridToDo.Location = new Point(12, 12);
             gridToDo.Name = "gridToDo";
+            gridToDo.RowTemplate.Resizable = DataGridViewTriState.True;
             gridToDo.Size = new Size(480, 215);
             gridToDo.TabIndex = 0;
             // 
@@ -49,6 +51,7 @@
             BoxToDo.Name = "BoxToDo";
             BoxToDo.Size = new Size(480, 23);
             BoxToDo.TabIndex = 1;
+            BoxToDo.TextChanged += BoxToDo_TextChanged;
             // 
             // Simpan
             // 
@@ -60,17 +63,19 @@
             Simpan.TabIndex = 2;
             Simpan.Text = "SIMPAN";
             Simpan.UseVisualStyleBackColor = false;
+            Simpan.Click += Simpan_Click;
             // 
-            // Form1
+            // Dekstop
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(502, 450);
             Controls.Add(Simpan);
             Controls.Add(BoxToDo);
             Controls.Add(gridToDo);
-            Name = "Form1";
+            Name = "Dekstop";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)gridToDo).EndInit();
             ResumeLayout(false);
             PerformLayout();
